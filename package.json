@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://mern-project-ia0h.onrender.com",
+  "proxy": "https://mern-project-86su.onrender.com",
   "dependencies": {
     "cookie-parser": "^1.4.7",
     "cra-template": "1.2.0",
