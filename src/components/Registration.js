@@ -23,7 +23,7 @@
 //     e.preventDefault();
 //     const {name,email,phone,work,password,cpassword} = user;
 
-//     const res = await fetch('/register',{
+//     const res = await fetch('https://mern-project-3-cg8m.onrender.com/register',{
 //       method:"POST",
 //       headers:{
 //         "Content-type" : "application/json"
