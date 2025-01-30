@@ -11,7 +11,7 @@ const Login = () => {
 
   try {
     // Use environment variable for API URL
-    const res = await fetch(`${process.env.REACT_APP_API_URL}/signin`, {
+    const res = await fetch(`https://mern-project-3-cg8m.onrender.com/signin`, {
       method: "POST",
       headers: {
         "Content-type": "application/json",
