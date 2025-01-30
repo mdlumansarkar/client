@@ -6,7 +6,7 @@ const Logout = () => {
     // promises
 
     useEffect(()=>{
-        fetch('/logout',{
+        fetch('https://mern-project-3-cg8m.onrender.com/logout',{
             method:"GET",
             headers:{
                 Accept:"application/json",
