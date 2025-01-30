@@ -18,10 +18,10 @@ const Contact = () => {
       const response = await fetch("https://mern-project-3-cg8m.onrender.com/contact", {
         method: "GET",
         headers: {
-          // Accept: "application/json", Here not cookies send
+          Accept: "application/json",
           "Content-Type": "application/json",
         },
-        // credentials: "include", // Here not token send here. Include cookies for authentication
+        credentials: "include",
       });
 
       if (!response.ok) {
