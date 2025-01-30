@@ -7,7 +7,7 @@ const Home = () => {
 
   const homePage = async (req,res) =>{
     try{
-      const response = await fetch('/getData',{
+      const response = await fetch('https://mern-project-3-cg8m.onrender.com/getData',{
         method:"GET",
         headers:{
           "Content-type":"application/json"
