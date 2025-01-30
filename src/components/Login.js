@@ -7,32 +7,35 @@ const Login = () => {
   const navigate = useNavigate();
 
   const postData = async (e) => {
-    e.preventDefault(); // Prevent default form submission behavior
-    
-    try {
-      const res = await fetch('https://mern-project-3-cg8m.onrender.com/signin', {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify({
-          email, 
-          password
-        }),
-      });
+  e.preventDefault(); // Prevent default form submission behavior
 
-      const data = await res.json();
-      if (res.status === 422 || !data) {
-        window.alert("Invalid Credentials");
-      } else {
-        window.alert("Sign-in Successfully.");
-        navigate('/');
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      window.alert('Something went wrong. Please try again later.');
+  try {
+    // Use environment variable for API URL
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/signin`, {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({
+        email, 
+        password
+      }),
+      credentials: 'include', // Send cookies (token) with the request
+    });
+
+    const data = await res.json();
+    
+    if (res.status === 422 || !data) {
+      window.alert("Invalid Credentials");
+    } else {
+      window.alert("Sign-in Successfully.");
+      navigate('/'); // Redirect to the homepage or desired page
     }
-  };
+  } catch (error) {
+    console.error('Error:', error);
+    window.alert('Something went wrong. Please try again later.');
+  }
+};
 
   return (
     <>
