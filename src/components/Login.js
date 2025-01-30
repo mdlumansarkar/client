@@ -6,6 +6,38 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
+
+  // postData = async (e) => {
+  //   e.preventDefault(); // Prevent default form submission behavior
+    
+  //   try {
+  //     const res = await fetch('https://mern-project-3-cg8m.onrender.com/signin', {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-type": "application/json",
+  //       },
+  //       body: JSON.stringify({
+  //         email, 
+  //         password
+  //       }),
+  //     });
+
+  //     const data = await res.json();
+  //     if (res.status === 422 || !data) {
+  //       window.alert("Invalid Credentials");
+  //     } else {
+  //       window.alert("Sign-in Successfully.");
+  //       navigate('/');
+  //     }
+  //   } catch (error) {
+  //     console.error('Error:', error);
+  //     window.alert('Something went wrong. Please try again later.');
+  //   }
+  // };
+
+
+  
+  
   const postData = async (e) => {
   e.preventDefault(); // Prevent default form submission behavior
 
@@ -20,7 +52,7 @@ const Login = () => {
         email, 
         password
       }),
-      credentials: 'include', // Send cookies (token) with the request
+      // credentials: 'include', // Send cookies (token) with the request
     });
 
     const data = await res.json();
