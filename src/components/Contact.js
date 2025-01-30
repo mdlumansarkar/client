@@ -15,7 +15,7 @@ const Contact = () => {
   // Fetch user data
   const fetchUserData = async () => {
     try {
-      const response = await fetch("/getData", {
+      const response = await fetch("https://mern-project-3-cg8m.onrender.com/getData", {
         method: "GET",
         headers: {
           // Accept: "application/json", Here not cookies send
