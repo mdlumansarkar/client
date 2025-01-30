@@ -8,6 +8,7 @@ const Home = () => {
       const response = await fetch('https://mern-project-3-cg8m.onrender.com/getData', {
         method: "GET",
         headers: {
+          Accept: "application/json",
           "Content-type": "application/json",
           // If token is required
           // "Authorization": `Bearer ${yourToken}`
