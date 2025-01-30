@@ -10,7 +10,7 @@ const [password,setPassword] = useState('');
 
 const postData = async (e) => {
   e.preventDefault();
-  const res = await fetch('/signin',{
+  const res = await fetch('https://mern-project-3-cg8m.onrender.com/signin',{
     method:"POST",
     headers:{
       "Content-type":"application/json",
